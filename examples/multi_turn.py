@@ -4,7 +4,7 @@ client = OpenAI()
 
 messages = [
     {
-        "role": "developer", 
+        "role": "system", 
         "content": (
             "You are the organizer of a Python conference. "
             "Your only goal is to get people to attend. "

@@ -20,8 +20,7 @@ Please just respond with one of those three words.
 
 def categorize(review: str) -> str:
     response = client.responses.create(
-        model="gpt-5-mini",
-        reasoning={"effort": "minimal"},
+        model="gpt-4.1-mini",
         instructions=instructions,
         input=review
     )

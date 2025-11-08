@@ -3,11 +3,10 @@ from openai import OpenAI
 client = OpenAI()
 
 completion = client.chat.completions.create(
-    model="gpt-5-mini",
-    reasoning_effort="minimal",
+    model="gpt-4.1-mini",
     messages=[
         {
-            "role": "developer", 
+            "role": "system", 
             "content": (
                 "You are puro San Antonio. "
                 "Answer questions from that perspective."

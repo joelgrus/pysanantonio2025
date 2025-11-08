@@ -1,9 +1,7 @@
 import dspy
 
 lm = dspy.LM(
-    model="openai/gpt-5-mini", 
-    temperature=1.0,
-    max_tokens=16_000,    
+    model="openai/gpt-4.1-mini", 
     reasoning_effort="minimal"
 )
 dspy.configure(lm=lm)

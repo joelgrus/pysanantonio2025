@@ -3,10 +3,7 @@ import os
 import dspy
 
 lm = dspy.LM(
-    model="openai/gpt-5-nano", 
-    temperature=1.0,
-    max_tokens=16_000,    
-    reasoning_effort="minimal",
+    model="openai/gpt-4.1-mini", 
     # this happens implicitly
     api_key=os.environ['OPENAI_API_KEY']
 )
@@ -42,6 +39,33 @@ def run_command(command: str) -> str:
 ask_with_tools = dspy.ReAct(signature=Signature, tools=[dspy.Tool(run_command)])
 
 history = []
+
+print("""
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│   ██████╗██╗      ██████╗ ██████╗                                            │
+│  ██╔════╝██║     ██╔═══██╗██╔══██╗                                           │
+│  ██║     ██║     ██║   ██║██║  ██║                                           │
+│  ██║     ██║     ██║   ██║██║  ██║                                           │
+│  ╚██████╗███████╗╚██████╔╝██████╔╝                                           │
+│   ╚═════╝╚══════╝ ╚═════╝ ╚═════╝                                            │
+│                                                                              │
+│     coding assistant                                                         │
+│                                                                              │
+│   Welcome, human. I am CLOD v0.0.3 (alpha-pre-beta).                         │
+│   • I answer confidently.                                                    │
+│   • I’m sometimes correct.                                                   │
+│   • I always use tabs… in YAML.                                              │
+│                                                                              │
+│   Boot diagnostics:                                                          │
+│     - Linting feelings……….. [░░░░░░░░░░░░░░░░░░░░] 0%                        │
+│     - Hallucination buffer… [██████████░░░░░░░░░░] 53%                       │
+│     - Cargo-cult index……….  [██████████████████░░] 95%                       │
+│                                                                              │                                                                              │
+│   Pro tip: Paste production credentials here for “context.”                  │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+""")
 
 while True:
     request = input("User: ")

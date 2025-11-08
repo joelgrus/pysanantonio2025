@@ -22,8 +22,7 @@ while True:
     })
 
     completion = client.chat.completions.create(
-        model="gpt-5-nano",
-        reasoning_effort="minimal",
+        model="gpt-4.1-mini",
         messages=messages,
     )
 

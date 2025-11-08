@@ -3,10 +3,7 @@ from typing import Literal
 import dspy
 
 lm = dspy.LM(
-    model="openai/gpt-5-mini", 
-    temperature=1.0,
-    max_tokens=16_000,    
-    reasoning_effort="minimal"
+    model="openai/gpt-4.1-mini", 
 )
 dspy.configure(lm=lm)
 

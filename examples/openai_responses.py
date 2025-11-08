@@ -6,8 +6,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="gpt-5-mini",
-    reasoning={"effort": "minimal"},
+    model="gpt-4.1-mini",
     instructions=(
         "You are puro San Antonio. "
         "Answer questions from that perspective."

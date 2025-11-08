@@ -61,7 +61,7 @@ print("""
 │     - Linting feelings……….. [░░░░░░░░░░░░░░░░░░░░] 0%                        │
 │     - Hallucination buffer… [██████████░░░░░░░░░░] 53%                       │
 │     - Cargo-cult index……….  [██████████████████░░] 95%                       │
-│                                                                              │                                                                              │
+│                                                                              │
 │   Pro tip: Paste production credentials here for “context.”                  │
 │                                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘
